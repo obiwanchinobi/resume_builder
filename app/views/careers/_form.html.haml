@@ -1,0 +1,31 @@
+= form_for @career do |f|
+  -if @career.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@career.errors.count, "error")} prohibited this career from being saved:"
+      %ul
+        - @career.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :work_experience
+    = f.text_field :work_experience
+  .field
+    = f.label :employer
+    = f.text_field :employer
+  .field
+    = f.label :started_on
+    = f.date_select :started_on
+  .field
+    = f.label :finished_on
+    = f.date_select :finished_on
+  .field
+    = f.label :position
+    = f.text_field :position
+  .field
+    = f.label :description
+    = f.text_field :description
+  .field
+    = f.label :display_index
+    = f.text_field :display_index
+  .actions
+    = f.submit 'Save'

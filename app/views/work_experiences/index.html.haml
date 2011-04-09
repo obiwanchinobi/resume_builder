@@ -1,0 +1,19 @@
+%h1 Listing work_experiences
+
+%table
+  %tr
+    %th Display index
+    %th
+    %th
+    %th
+
+  - @work_experiences.each do |work_experience|
+    %tr
+      %td= work_experience.display_index
+      %td= link_to 'Show', work_experience
+      %td= link_to 'Edit', edit_work_experience_path(work_experience)
+      %td= link_to 'Destroy', work_experience, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Work experience', new_work_experience_path

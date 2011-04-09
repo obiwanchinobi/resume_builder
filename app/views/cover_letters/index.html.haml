@@ -1,0 +1,21 @@
+%h1 Listing cover_letters
+
+%table
+  %tr
+    %th Jobvert
+    %th Body
+    %th
+    %th
+    %th
+
+  - @cover_letters.each do |cover_letter|
+    %tr
+      %td= cover_letter.jobvert
+      %td= cover_letter.body
+      %td= link_to 'Show', cover_letter
+      %td= link_to 'Edit', edit_cover_letter_path(cover_letter)
+      %td= link_to 'Destroy', cover_letter, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Cover letter', new_cover_letter_path

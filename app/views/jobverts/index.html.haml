@@ -1,0 +1,25 @@
+%h1 Listing jobverts
+
+%table
+  %tr
+    %th Position
+    %th Company
+    %th Website
+    %th Found on
+    %th
+    %th
+    %th
+
+  - @jobverts.each do |jobvert|
+    %tr
+      %td= jobvert.position
+      %td= jobvert.company
+      %td= jobvert.website
+      %td= jobvert.found_on
+      %td= link_to 'Show', jobvert
+      %td= link_to 'Edit', edit_jobvert_path(jobvert)
+      %td= link_to 'Destroy', jobvert, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Jobvert', new_jobvert_path

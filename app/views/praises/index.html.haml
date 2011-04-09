@@ -1,0 +1,29 @@
+%h1 Listing praises
+
+%table
+  %tr
+    %th Recommendation
+    %th Comment
+    %th Reference name
+    %th Reference title
+    %th Year
+    %th Display index
+    %th
+    %th
+    %th
+
+  - @praises.each do |praise|
+    %tr
+      %td= praise.recommendation
+      %td= praise.comment
+      %td= praise.reference_name
+      %td= praise.reference_title
+      %td= praise.year
+      %td= praise.display_index
+      %td= link_to 'Show', praise
+      %td= link_to 'Edit', edit_praise_path(praise)
+      %td= link_to 'Destroy', praise, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Praise', new_praise_path

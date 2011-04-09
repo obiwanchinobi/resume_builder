@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Display index:
+  = @work_experience.display_index
+
+= link_to 'Edit', edit_work_experience_path(@work_experience)
+\|
+= link_to 'Back', work_experiences_path

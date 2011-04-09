@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Jobvert:
+  = @cover_letter.jobvert
+%p
+  %b Body:
+  = @cover_letter.body
+
+= link_to 'Edit', edit_cover_letter_path(@cover_letter)
+\|
+= link_to 'Back', cover_letters_path

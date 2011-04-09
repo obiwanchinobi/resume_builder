@@ -1,0 +1,35 @@
+= link_to 'Edit', edit_jobvert_path(@jobvert)
+\|
+= link_to 'Back', jobverts_path
+
+%hr
+
+%h1 Jobvert
+
+%table
+  %tr
+    %th Position
+    %th Company
+    %th Website
+    %th Found on
+  %tr
+    %td= @jobvert.position
+    %td= @jobvert.company
+    %td= @jobvert.website
+    %td= @jobvert.found_on
+
+%h1 Cover Letter
+
+%div{ :style => "text-align:justify;" }
+  = @jobvert.cover_letter.body.html_safe
+
+%h1 Recommendations
+
+- if @jobvert.recommendation.present? && @jobvert.recommendation.praises.any?
+  = @jobvert.recommendation.praises.each do |p|
+    %p{ :style => "text-align:justify;" }
+      = p.comment.html_safe
+      %span.commented-at{ :style => "float:right;" }== #{p.reference_name.html_safe} / #{p.reference_title} / #{p.employer.html_safe} / #{p.year}
+    %br
+
+%h1 Work Experience

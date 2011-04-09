@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Jobvert:
+  = @achievement.jobvert
+%p
+  %b Re name:
+  = @achievement.re_name
+%p
+  %b Display index:
+  = @achievement.display_index
+
+= link_to 'Edit', edit_achievement_path(@achievement)
+\|
+= link_to 'Back', achievements_path

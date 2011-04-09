@@ -1,0 +1,27 @@
+%h1 Listing trophies
+
+%table
+  %tr
+    %th Achievement
+    %th Title
+    %th Description
+    %th Achieved on
+    %th Display index
+    %th
+    %th
+    %th
+
+  - @trophies.each do |trophy|
+    %tr
+      %td= trophy.achievement
+      %td= trophy.title
+      %td= trophy.description
+      %td= trophy.achieved_on
+      %td= trophy.display_index
+      %td= link_to 'Show', trophy
+      %td= link_to 'Edit', edit_trophy_path(trophy)
+      %td= link_to 'Destroy', trophy, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Trophy', new_trophy_path

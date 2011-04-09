@@ -10,7 +10,7 @@ module ResumeBuilder
   class Application < Rails::Application
     # Configure generators values. Many other options are available, be sure to check the documentation.  
     config.generators do |g|  
-      # g.test_framework  :test_unit, :fixture => true  
+      g.test_framework :rspec
       g.stylesheets false
     end
     
@@ -37,7 +37,7 @@ module ResumeBuilder
     # config.i18n.default_locale = :de
 
     # JavaScript files you want as :defaults (application.js is always included).
-    config.action_view.javascript_expansions[:defaults] = %w(jquery jquery-ui rails)
+    config.action_view.javascript_expansions[:defaults] = %w(jquery jquery-ui.min rails)
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"

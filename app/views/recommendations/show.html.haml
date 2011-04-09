@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Jobvert:
+  = @recommendation.jobvert
+%p
+  %b Re name:
+  = @recommendation.re_name
+%p
+  %b Display index:
+  = @recommendation.display_index
+
+= link_to 'Edit', edit_recommendation_path(@recommendation)
+\|
+= link_to 'Back', recommendations_path

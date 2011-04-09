@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Achievement:
+  = @trophy.achievement
+%p
+  %b Title:
+  = @trophy.title
+%p
+  %b Description:
+  = @trophy.description
+%p
+  %b Achieved on:
+  = @trophy.achieved_on
+%p
+  %b Display index:
+  = @trophy.display_index
+
+= link_to 'Edit', edit_trophy_path(@trophy)
+\|
+= link_to 'Back', trophies_path

@@ -1,0 +1,19 @@
+= form_for @achievement do |f|
+  -if @achievement.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@achievement.errors.count, "error")} prohibited this achievement from being saved:"
+      %ul
+        - @achievement.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :jobvert
+    = f.text_field :jobvert
+  .field
+    = f.label :re_name
+    = f.text_field :re_name
+  .field
+    = f.label :display_index
+    = f.text_field :display_index
+  .actions
+    = f.submit 'Save'

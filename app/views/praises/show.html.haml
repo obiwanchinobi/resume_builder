@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Recommendation:
+  = @praise.recommendation
+%p
+  %b Comment:
+  = @praise.comment
+%p
+  %b Reference name:
+  = @praise.reference_name
+%p
+  %b Reference title:
+  = @praise.reference_title
+%p
+  %b Year:
+  = @praise.year
+%p
+  %b Display index:
+  = @praise.display_index
+
+= link_to 'Edit', edit_praise_path(@praise)
+\|
+= link_to 'Back', praises_path

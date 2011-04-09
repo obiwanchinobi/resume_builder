@@ -1,0 +1,23 @@
+%h1 Listing responsibilities
+
+%table
+  %tr
+    %th Career
+    %th Description
+    %th Display index
+    %th
+    %th
+    %th
+
+  - @responsibilities.each do |responsibility|
+    %tr
+      %td= responsibility.career
+      %td= responsibility.description
+      %td= responsibility.display_index
+      %td= link_to 'Show', responsibility
+      %td= link_to 'Edit', edit_responsibility_path(responsibility)
+      %td= link_to 'Destroy', responsibility, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Responsibility', new_responsibility_path

@@ -1,0 +1,28 @@
+= form_for @praise do |f|
+  -if @praise.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@praise.errors.count, "error")} prohibited this praise from being saved:"
+      %ul
+        - @praise.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :recommendation
+    = f.text_field :recommendation
+  .field
+    = f.label :comment
+    = f.text_field :comment
+  .field
+    = f.label :reference_name
+    = f.text_field :reference_name
+  .field
+    = f.label :reference_title
+    = f.text_field :reference_title
+  .field
+    = f.label :year
+    = f.text_field :year
+  .field
+    = f.label :display_index
+    = f.text_field :display_index
+  .actions
+    = f.submit 'Save'

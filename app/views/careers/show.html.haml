@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Work experience:
+  = @career.work_experience
+%p
+  %b Employer:
+  = @career.employer
+%p
+  %b Started on:
+  = @career.started_on
+%p
+  %b Finished on:
+  = @career.finished_on
+%p
+  %b Position:
+  = @career.position
+%p
+  %b Description:
+  = @career.description
+%p
+  %b Display index:
+  = @career.display_index
+
+= link_to 'Edit', edit_career_path(@career)
+\|
+= link_to 'Back', careers_path

@@ -1,0 +1,16 @@
+= form_for @cover_letter do |f|
+  -if @cover_letter.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@cover_letter.errors.count, "error")} prohibited this cover_letter from being saved:"
+      %ul
+        - @cover_letter.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :jobvert
+    = f.text_field :jobvert
+  .field
+    = f.label :body
+    = f.text_area :body
+  .actions
+    = f.submit 'Save'

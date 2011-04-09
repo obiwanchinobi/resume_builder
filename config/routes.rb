@@ -1,4 +1,24 @@
 ResumeBuilder::Application.routes.draw do
+  resources :praises
+
+  resources :recommendations
+
+  resources :trophies
+
+  resources :achievements
+
+  resources :cover_letters
+
+  resources :jobverts
+
+  resources :tags
+
+  resources :responsibilities
+
+  resources :careers
+
+  resources :work_experiences
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +68,7 @@ ResumeBuilder::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  root :to => "jobverts#index"
 
   # See how all your routes lay out with "rake routes"
 

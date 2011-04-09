@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Career:
+  = @tag.career
+%p
+  %b Description:
+  = @tag.description
+%p
+  %b Display index:
+  = @tag.display_index
+
+= link_to 'Edit', edit_tag_path(@tag)
+\|
+= link_to 'Back', tags_path
