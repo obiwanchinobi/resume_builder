@@ -26,10 +26,9 @@
 %h1 Recommendations
 
 - if @jobvert.recommendation.present? && @jobvert.recommendation.praises.any?
-  = @jobvert.recommendation.praises.each do |p|
+  - @jobvert.recommendation.praises.each do |p|
     %p{ :style => "text-align:justify;" }
       = p.comment.html_safe
       %span.commented-at{ :style => "float:right;" }== #{p.reference_name.html_safe} / #{p.reference_title} / #{p.employer.html_safe} / #{p.year}
-    %br
 
 %h1 Work Experience
