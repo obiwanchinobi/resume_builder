@@ -1,7 +1,7 @@
 class CreateAchievements < ActiveRecord::Migration
   def self.up
     create_table :achievements do |t|
-      t.belongs_to :jobvert
+      t.belongs_to :career
       t.string :re_name
       t.integer :display_index
 

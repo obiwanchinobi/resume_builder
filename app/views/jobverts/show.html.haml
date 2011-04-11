@@ -32,3 +32,14 @@
       %span.commented-at{ :style => "float:right;" }== #{p.reference_name.html_safe} / #{p.reference_title} / #{p.employer.html_safe} / #{p.year}
 
 %h1 Work Experience
+
+- if @jobvert.work_experience.present? && @jobvert.work_experience.careers.any?
+  - @jobvert.work_experience.careers.each do |c|
+    %h3== #{c.position} / #{c.employer.html_safe} <span style='float:right;'>#{c.duration}</span>
+    = c.description.html_safe
+    
+    - if c.accomplishments.present? && c.accomplishments.any?
+      %h5 Accomplishments
+      %ul
+        - c.accomplishments.each do |a|
+          %li= a.description

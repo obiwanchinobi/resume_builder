@@ -3,10 +3,9 @@ class CreateCareers < ActiveRecord::Migration
     create_table :careers do |t|
       t.belongs_to :work_experience
       t.string :employer
-      t.date :started_on
-      t.date :finished_on
+      t.string :duration
       t.string :position
-      t.string :description
+      t.text :description
       t.integer :display_index
 
       t.timestamps

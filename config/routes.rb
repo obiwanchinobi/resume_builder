@@ -1,4 +1,6 @@
 ResumeBuilder::Application.routes.draw do
+  resources :accomplishments
+
   resources :praises
 
   resources :recommendations

@@ -1,6 +1,6 @@
 require File.expand_path('../seed_data', __FILE__)
 
-jv = Jobvert.create(:position => "Software Engineer", :company => "se_template")
+jv = Jobvert.create(:position => "Software Engineer", :company => "se_template", :company => "ManyMoon", :found_on => "April, 2010", :website => "Github Jobs")
 
 CoverLetter.create(:jobvert => jv, :body => COVER_LETTER)
 
@@ -18,3 +18,13 @@ Praise.create(:recommendation => rec, :comment => "I have found him to be an ent
 
 Praise.create(:recommendation => rec, :comment => "A personable, bright, and confident person, David was a valuable colleague. His technical ability and approachable attitude made him the person to go to for advice. Whether discussing a support issue or planning new development, his opinion was always valued. David always demonstrated a sense of responsibility and work ethic, consistently delivering timely results. He was an example to all who worked with him.", :reference_name => "F. Pulvirenti", :reference_title => "Senior Developer.", :employer => "D&eacute;tente Systems", :year => "2004", :display_index => 5)
 
+we = WorkExperience.create(:jobvert => jv)
+
+CAREERS.each do |c|
+  career = Career.create!(:work_experience => we, :position => c[0], :employer =>c[1], :duration => c[2], :description => c[3])
+  if c[4].any?
+    c[4].each_with_index do |a, i|
+      Accomplishment.create(:career => career, :description => a, :display_index => i)
+    end
+  end
+end

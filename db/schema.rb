@@ -10,10 +10,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110409213305) do
+ActiveRecord::Schema.define(:version => 20110411134314) do
+
+  create_table "accomplishments", :force => true do |t|
+    t.integer  "career_id"
+    t.string   "description"
+    t.integer  "display_index"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "achievements", :force => true do |t|
-    t.integer  "jobvert_id"
+    t.integer  "career_id"
     t.string   "re_name"
     t.integer  "display_index"
     t.datetime "created_at"
@@ -23,10 +31,9 @@ ActiveRecord::Schema.define(:version => 20110409213305) do
   create_table "careers", :force => true do |t|
     t.integer  "work_experience_id"
     t.string   "employer"
-    t.date     "started_on"
-    t.date     "finished_on"
+    t.string   "duration"
     t.string   "position"
-    t.string   "description"
+    t.text     "description"
     t.integer  "display_index"
     t.datetime "created_at"
     t.datetime "updated_at"
