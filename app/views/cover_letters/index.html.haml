@@ -2,7 +2,6 @@
 
 %table
   %tr
-    %th Jobvert
     %th Body
     %th
     %th
@@ -10,7 +9,6 @@
 
   - @cover_letters.each do |cover_letter|
     %tr
-      %td= cover_letter.jobvert
       %td= cover_letter.body
       %td= link_to 'Show', cover_letter
       %td= link_to 'Edit', edit_cover_letter_path(cover_letter)

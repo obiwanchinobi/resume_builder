@@ -21,7 +21,7 @@
 %h1 Cover Letter
 
 %div{ :style => "text-align:justify;" }
-  = @jobvert.cover_letter.body.html_safe
+  = merge_tags(@jobvert.cover_letter.body)
 
 %h1 Recommendations
 
