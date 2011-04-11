@@ -11,6 +11,38 @@ CAREERS = [
       "Successfully project managed and delivered $40K project",
       "Successfully project managed and delivered $15K project",
       "Management of six developers and two UI specialists"
+    ],
+    [
+      "Client acquisition management",
+      "Contract negotiations",
+      "Project planning",
+      "Resource scheduling",
+      "Recruitment of contract developers",
+      "Management of company finances",
+      "On-site stakeholder workshops: requirements and training",
+      "Web-based software development using Ruby on Rails (v2.3.5, v3.0.3), haml, jQuery and a MySQL database",
+      "Implementation of project management system using RedMine and PivotalTracker",
+      "Implementation of version control system using GitHub",
+      "Implementation of Continuous Integration using CruiseControl and Hudson",
+      "Website prototyping using Photoshop CS3",
+      "System implementations"
+    ],
+    [
+      "cucumber",
+      "git",
+      "haml",
+      "heroku",
+      "jQuery",
+      "MS Project",
+      "MySQL",
+      "PostgreSQL",
+      "Photoshop",
+      "Project management",
+      "Rspec",
+      "Recruitment",
+      "Ruby On Rails",
+      "Scrum",
+      "Web development - full stack"
     ]
   ],
   [
@@ -20,6 +52,26 @@ CAREERS = [
     [
       "Implemented first WordPress project for the company",
       "Successfully project managed aspects of a $200K project"
+    ],
+    [
+      "Functional specifications: wireframes, interactive component documentation, use cases and traceability matrices",
+      "Test plans and release testing (white-box)",
+      "Scheduling and management of development and UX resources",
+      "Electronic direct mail (EDM) campaigns",
+      "Project planning",
+      "Stakeholder presentations",
+      "Stakeholder requirements gathering workshops"
+    ],
+    [
+      "EDM",
+      "jQuery",
+      "MS Project",
+      "MySQL",
+      "PHP",
+      "Photoshop",
+      "Project management",
+      "Web development - full stack",
+      "WordPress"
     ]
   ],
   [
@@ -27,14 +79,36 @@ CAREERS = [
     "BuyALL",
     "Dec 2007 - Jul 2008",
     "<p style='text-align:justify;'>The finances at Global Direction Services were not doing so well in 2007 so after discussions with the director I agreed to take some leave from the company until they regained their momentum. This led to an opportunity to work with another InterSystems application partner.</p>",
-    []
+    [],
+    [
+      "Web-based software development using Cach&eacute; Server Pages (CSP) on a Cach&eacute; post- relational database",
+      "Frequent online meetings with CTO to assist with design, scalability and feature enhancements"
+    ],
+    [
+      "CSP",
+      "Non-relational/post-relational databases",
+      "Web development - full-stack"
+    ]
   ],
   [
     "SOFTWARE ENGINEER",
     "University of Technology, Sydney",
     "Sep 2006 - Dec 2007",
     "<p style='text-align:justify;'>A colleague asked as a favour to provide a few weeks (which later turned into sixteen months) of after-hours consultancy for a research project utilising web technologies with image recognition software.</p>",
-    []
+    [],
+    [
+      "Web-based software development with Cach&eacute; Server Pages (CSP) using a Cach&eacute; post-relational database",
+      "Database architecture and scalability",
+      "Mentoring a team of four undergraduate researchers on web development and performance optimisation"
+    ],
+    [
+      "CSP",
+      "Non-relational/post-relational databases",
+      "Project Management",
+      "Scalability",
+      "Training and mentoring",
+      "Web development - full-stack"
+    ]
   ],
   [
     "SOFTWARE ENGINEER",
@@ -46,22 +120,93 @@ CAREERS = [
       "Early adoption of MVC design pattern for ZEN applications",
       "Early adoption of component inheritance of ZEN components",
       "Mentoring of three junior developers"
+    ],
+    [
+      "Web-based software development using Cach&eacute; Server Pages (CSP) on a Cach&eacute; post-relational database",
+      "Development of coding standards",
+      "Implementation of first testing framework",
+      "Implemented MVC design pattern",
+      "Created in-house common components to improve application consistency",
+      "Management of resources",
+      "Mentor to junior developers",
+      "Recruitment of developers",
+      "Stakeholder workshops"
+    ],
+    [
+      "CSP",
+      "MS Project",
+      "Non-relational/post-relational databases",
+      "Presentations",
+      "Project management",
+      "Recruitment",
+      "Web development - full-stack"
+    ]
+  ],  
+  [
+    "SOFTWARE ENGINEER",
+    "Medical Systems Deisgn",
+    "Mar 2005 - Oct 2006",
+    "<p style='text-align:justify;'>TALK ABOUT BEING A ONE-MAN SHOP This InterSystems Application Partner was an innovative start-up providing surgical instrument tracking software that was part of mission-critical systems of the hospitals. Here I took the lead of technology and worked closely with the director to meet the strategic goals.</p>",
+    [
+      "Created a ticketing system overnight to manage influx of support requests and application enhancements. This significantly reduced double-up of effort and confusion of priorities as it allowed for transparency of priorities between the sales team, developers and upper management",
+      "Successfully project managed and delivered $600K project",
+      "Successfully project managed and delivered $120K project",
+      "Managed a team of three developers"
+    ],
+    [
+      "Web-based software development using Cach&eacute; Server Pages (CSP) on a Cach&eacute; post-relational database",
+      "Client-side software development using VB6 and VB.Net (v2) against a Cach&eacute; post-relational database",
+      "Database architecture",
+      "Management of resources",
+      "Mentor to junior developers",
+      "Recruitment of developers",
+      "Stakeholder workshops",
+      "DBA responsibilities: security and maintenance",
+      "Implementation of software packaging using InstallShield",
+      "Project management",
+      "On-site implementations",
+      "Stakeholder presentations",
+      "On-site stakeholder requirements gathering workshops",
+      "Creation of system implementation plans"
+    ],
+    [
+      "CSP",
+      "Data migrations",
+      "InstallShield",
+      "Mobile web development - full-stack",
+      "MS Project",
+      "Non-relational/post-relational databases",
+      "Presentations",
+      "Project management",
+      "Recruitment",
+      "SQL reporting",
+      "Web development - full-stack"
     ]
   ],
   [
-    "SOFTWARE ENGINEER",
-    "D&eacute;tente Systems",
-    "Mar 2005 - Oct 2006",
-    "<p style='text-align:justify;'>TALK ABOUT BEING A ONE-MAN SHOP This InterSystems Application Partner was an innovative start-up providing surgical instrument tracking software that was part of mission-critical systems of the hospitals. Here I took the lead of technology and worked closely with the director to meet the strategic goals.</p>",
-    []
-  ],
-  [
     "TECHNICAL SUPPORT PROGRAMMER",
-    "Medical Systems Design",
+    "D&eacute;tente Systems",
     "Mar 2002 - Mar 2005",
     "<p style='text-align:justify;'>D&eacute;tente Systems specialised in life-critical laboratory and radiology information systems. My role was the front-line of technical support that consisted of debugging complex legacy code, designing and implementing patches and also writing complex SQL for custom client reports. My development tasks included data migrations and feature enhancements.</p>",
     [
       "Successfully managed and delivered $10K project"
+    ],
+    [
+      "Worked closely with client representatives and in-house QC department",
+      "Database development including data migrations and database enhancements using Cach&eacute; Object Script and Cach&eacute; post-relational database",
+      "Serve clients requests responsively and assumes responsibility for assigned requests",
+      "Manage, support and enhance existing legacy systems",
+      "Responsible for designing, developing and implementing client reports through PL/SQL and Active Reports",
+      "Black-box testing of patches",
+      "On-site system upgrades"
+    ],
+    [
+      "Active Reports",
+      "Back-end development",
+      "Data migrations",
+      "Non-relational/post-relational databases",
+      "SQL reporting",
+      "VB6"
     ]
   ]
 ]

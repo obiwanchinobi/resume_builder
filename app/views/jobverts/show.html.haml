@@ -40,6 +40,24 @@
     
     - if c.accomplishments.present? && c.accomplishments.any?
       %h5 Accomplishments
-      %ul
+      %ul{ :style => "list-style-image: url('/images/tick.png');" }
         - c.accomplishments.each do |a|
           %li= a.description
+    
+    %div.span-24{ :style => "border-top: dotted #ccc 1px; margin:0;" }
+      %div.span-12{ :style => "#{display_right_border(c) ? 'border-right: dotted #ccc 1px; margin:0;' : 'margin:0;'}" }
+        - if c.responsibilities.present? && c.responsibilities.any?
+          %h5 Responsibilities
+          %ul
+            - c.responsibilities.each do |r|
+              %li= r.description.html_safe
+    
+      %div.span-12.last{ :style => "#{display_right_border(c) ? 'margin:0;' : 'border-left: dotted #ccc 1px; margin:0;'}" }
+        - if c.tags.present? && c.tags.any?
+          %h5{ :style => "float:right;" } Tags
+          %br
+          %ul{ :style => "text-align:right; margin-right:0; list-style: none;" }
+            - c.tags.each do |t|
+              %li= t.description
+
+    %hr

@@ -22,9 +22,25 @@ we = WorkExperience.create(:jobvert => jv)
 
 CAREERS.each do |c|
   career = Career.create!(:work_experience => we, :position => c[0], :employer =>c[1], :duration => c[2], :description => c[3])
+
+  # Career Accomplishments
   if c[4].any?
     c[4].each_with_index do |a, i|
       Accomplishment.create(:career => career, :description => a, :display_index => i)
+    end
+  end
+  
+  # Responsibilities
+  if c[5].any?
+    c[5].each_with_index do |r, i|
+      Responsibility.create(:career => career, :description => r, :display_index => i)
+    end
+  end
+  
+  # Tags
+  if c[5].any?
+    c[6].each_with_index do |r, i|
+      Tag.create(:career => career, :description => r, :display_index => i)
     end
   end
 end
