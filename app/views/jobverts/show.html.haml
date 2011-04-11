@@ -18,20 +18,42 @@
     %td= @jobvert.website
     %td= @jobvert.found_on
 
-%h1 Cover Letter
+%div.span-24
+  %div.span-1
+    %img{ :src => "/images/coffee_mug.png", :style => "height:36px; width:36px; " }
+  %div.span-23.last
+    %h1 Cover Letter
+  
+  .span-24
+    %div{ :style => "text-align:justify;" }
+      = merge_tags(@jobvert.cover_letter.body)
 
-%div{ :style => "text-align:justify;" }
-  = merge_tags(@jobvert.cover_letter.body)
+%div.span-24
+  %div.span-1
+    %img{ :src => "/images/globe_48.png", :style => "height:36px; width:36px; " }
+  %div.span-23.last
+    %h1 USA Work Eligibility
 
-%h1 Recommendations
+%div.span-24
+  %p Please do not hold it against me that I am an Australian citizen! I am currently on my honeymoon and plan to finish it in London in mid-May where I will be able to apply for the the E-3 Work Visa from the US Consulate. What does this mean? Well, I can fly to San Fran for an interview and if you like me (read as 'hire me') than I would have to fly somewhere else (exit America) to apply for the E-3 working Visa. One minor problem with this plan would be leaving my new wife by herself in a foreign country. But apart from that, I am able to legally work in America!
 
-- if @jobvert.recommendation.present? && @jobvert.recommendation.praises.any?
-  - @jobvert.recommendation.praises.each do |p|
-    %p{ :style => "text-align:justify;" }
-      = p.comment.html_safe
-      %span.commented-at{ :style => "float:right;" }== #{p.reference_name.html_safe} / #{p.reference_title} / #{p.employer.html_safe} / #{p.year}
+%div.span-24
+  %div.span-1
+    %img{ :src => "/images/comment_48.png", :style => "height:36px; width:36px; " }
+  %div.span-23.last
+    %h1 Recommendations
+  
+  - if @jobvert.recommendation.present? && @jobvert.recommendation.praises.any?
+    - @jobvert.recommendation.praises.each do |p|
+      %div.span-24.bubble{ :style => "margin:1em 0 0 0; display:block;" }
+        %p{ :style => "text-align:justify;" }= p.comment.html_safe
+      %div.commented-at{ :style => "float:right; margin:0;" }== #{p.reference_name.html_safe} / #{p.reference_title} / #{p.employer.html_safe} / #{p.year}
 
-%h1 Work Experience
+%div.span-24
+  %div.span-1
+    %img{ :src => "/images/spanner_48.png", :style => "height:36px; width:36px; " }
+  %div.span-23.last
+    %h1 Work Experience
 
 - if @jobvert.work_experience.present? && @jobvert.work_experience.careers.any?
   - @jobvert.work_experience.careers.each do |c|
@@ -39,7 +61,9 @@
     = c.description.html_safe
     
     - if c.accomplishments.present? && c.accomplishments.any?
-      %h5 Accomplishments
+      %h5
+        Accomplishments
+        %img{ :src => "/images/award_star_gold_3.png", :style => "height:16px; width:16px;" }
       %ul{ :style => "list-style-image: url('/images/tick.png');" }
         - c.accomplishments.each do |a|
           %li= a.description
@@ -47,17 +71,50 @@
     %div.span-24{ :style => "border-top: dotted #ccc 1px; margin:0;" }
       %div.span-12{ :style => "#{display_right_border(c) ? 'border-right: dotted #ccc 1px; margin:0;' : 'margin:0;'}" }
         - if c.responsibilities.present? && c.responsibilities.any?
-          %h5 Responsibilities
+          %h5{ :style => "padding:5px 0;" }
+            %img{ :src => "/images/magnifier.png", :style => "height:16px; width:16px;" }
+            Responsibilities
           %ul
             - c.responsibilities.each do |r|
               %li= r.description.html_safe
     
       %div.span-12.last{ :style => "#{display_right_border(c) ? 'margin:0;' : 'border-left: dotted #ccc 1px; margin:0;'}" }
         - if c.tags.present? && c.tags.any?
-          %h5{ :style => "float:right;" } Tags
-          %br
-          %ul{ :style => "text-align:right; margin-right:0; list-style: none;" }
-            - c.tags.each do |t|
-              %li= t.description
+          %h5{ :style => "float:right; padding:5px 0;" }
+            %img{ :src => "/images/tag_purple.png", :style => "height:16px; width:16px;" }
+            Tags
+          %div.span-12
+            %ul{ :style => "text-align:right; margin-right:0; list-style: none;" }
+              - c.tags.each do |t|
+                %li= t.description
 
     %hr
+
+%div.span-24
+  %div.span-1
+    %img{ :src => "/images/book_48.png", :style => "height:36px; width:36px; " }
+  %div.span-23.last
+    %h1 Education
+
+  %div.span-24
+    %h3 2010 - University of Technology, Sydney
+
+    %ul
+      %li Bachelor of Engineering and Diploma in Engineering Practice (second-class Honours)
+      %li Major in Information and Communication Technology (ICT) Engineering
+      %li Sub-Major in Software
+  
+%div.span-24
+  %div.span-1
+    %img{ :src => "/images/lightbulb_48.png", :style => "height:36px; width:36px; " }
+  %div.span-23.last
+    %h1 Hackfests
+  %div.span-24
+    %h3 OpenTok Developer Contest 2011 - Week 4 Finalist & Grand Finalist
+    %p The task was to develop an application using the OpenTok API. I build my app over the course of one week during the nights in hostels with the assistance of sub-par Internet connections and an un-orthopaedic bed; thank you Peru.
+    %p== To learn more, visit <a href='http://bit.ly/guaxj4'>http://bit.ly/guaxj4</a> and <a href='http://bit.ly/hFilDr'>http://bit.ly/hFilDr</a>. You can see the fruits of my labor at <a href='http://mymeetinghub.com'>http://mymeetinghub.com</a>
+  %div.span-24
+    %h3 Apps4NSW 2010 - Highly Commended
+    %p The government of Australia made public dozens of data sets and invited people to create ideas or implement applications utilising
+    this data. My friend and I knocked up a prototype in a weekend and submitted our entry among hundreds of submissions.
+    %p== To learn more, visit <a href='http://bit.ly/eXhUkd'>http://bit.ly/eXhUkd</a>
